@@ -14,12 +14,13 @@ export default {
   data() {
     return {
       projects: [],
-      base_api: 'http://127.0.0.1:8000/api/projects/',
+      base_api: 'http://127.0.0.1:8000',
+      url_project: '/api/projects'
     }
   },
   methods: {
     callApi() {
-      axios.get(this.base_api).then(response => {
+      axios.get(this.base_api + this.url_project).then(response => {
         console.log(response);
         this.projects = response.data.projects
       }).catch(error => {
@@ -40,7 +41,7 @@ export default {
     <div class="row">
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-5" v-for="project in projects.data" :key="project.id">
         <div class="card">
-          <img class="card-img-top" :src="base_api + 'storage/' + project.cover_image" alt="Title" />
+          <img class="card-img-top" :src="base_api + '/storage/' + project.cover_image" alt="Title" />
           <div class="card-body">
             <h4 class="card-title">{{ project.title }}</h4>
             <p class="card-text">{{ project.description }}</p>
