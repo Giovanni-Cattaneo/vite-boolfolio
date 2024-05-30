@@ -13,10 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.d-flex {
-  display: flex;
-}
-
 a {
   font-weight: 500;
   color: #646cff;
