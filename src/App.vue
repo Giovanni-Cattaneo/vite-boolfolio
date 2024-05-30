@@ -1,7 +1,13 @@
 <script>
 import axios from 'axios';
+import appHeader from "./components/appHeader.vue";
+import appFooter from "./components/appFooter.vue";
 
 export default {
+  components: {
+    appHeader,
+    appFooter,
+  },
   name: 'App',
   data() {
     return {
@@ -11,7 +17,7 @@ export default {
   methods: {
     callApi() {
       axios.get('http://127.0.0.1:8000/api/projects').then(response => {
-        console.log(response);
+        //console.log(response);
         this.projects = response.data.projects
       }).catch(error => {
         console.error('Error fetching projects:', error);
@@ -25,12 +31,14 @@ export default {
 </script>
 
 <template>
-  <div v-for="project in projects.data" :key="project.id">
+  <appHeader />
+
+  <div class="d-flex" v-for="project in projects.data" :key="project.id">
     <h1>
       {{ project.title }}
     </h1>
+    <p>{{ project.description }}</p>
   </div>
-  <h1>Ciao</h1>
 </template>
 
 <style></style>
