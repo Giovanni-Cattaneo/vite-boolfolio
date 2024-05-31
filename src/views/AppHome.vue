@@ -18,8 +18,8 @@ export default {
 
 <template>
     <appHeader />
-    <div>
-        <h1 class="text-dark">Welcome to App Home</h1>
+    <div class="container mt-5">
+        <h1 class="text-dark">Welcome to my Portfolio</h1>
     </div>
     <appFooter />
 </template>
