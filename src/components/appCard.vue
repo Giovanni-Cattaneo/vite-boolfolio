@@ -32,7 +32,7 @@ export default {
 
 <template>
 
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-5" v-for="project in projects" :key="project.id">
+    <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-5" v-for="project in projects" :key="project.id">
         <div class="card" @click="cardDetail">
             <img class="card-img-top" :src="base_api + '/storage/' + project.cover_image" alt="Title" />
             <div class="card-body">
@@ -44,7 +44,7 @@ export default {
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
 
 </template>
 

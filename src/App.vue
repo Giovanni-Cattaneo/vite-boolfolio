@@ -28,7 +28,7 @@ export default {
 
   <div class="container d-flex mt-5">
     <div class="row">
-      <appCard />
+      <router-view>name:projects</router-view>
     </div>
   </div>
 

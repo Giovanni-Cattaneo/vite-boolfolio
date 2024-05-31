@@ -1,17 +1,47 @@
 <script>
+import axios from 'axios';
 export default {
     name: 'ProjectsList',
     data() {
         return {
+            projects: [],
+            base_api: 'http://127.0.0.1:8000',
+            url_project: '/api/projects'
         };
+    },
+    methods: {
+        callApi() {
+            axios.get(this.base_api + this.url_project).then(response => {
+                // console.log(response);
+                this.projects = response.data.projects.data
+                console.log(response)
+            }).catch(error => {
+                console.error('Error fetching projects:', error);
+            });
+        },
+        cardDetail() {
+            console.log('Hello', this)
+        }
+    },
+    mounted() {
+        this.callApi();
     }
 };
 </script>
 
 <template>
-    <div>
-        <h1 class="text-light">Welcome to App Home</h1>
-        <p>This is the home page of your application.</p>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-5" v-for="project in projects" :key="project.id">
+        <div class="card" @click="cardDetail">
+            <img class="card-img-top" :src="base_api + '/storage/' + project.cover_image" alt="Title" />
+            <div class="card-body">
+                <h4 class="card-title">{{ project.title }}</h4>
+                <p class="card-text">{{ project.description }}</p>
+                <p class="card-text" v-if="project.type">{{ project.type.category }}</p>
+                <ul class="list-unstyled" v-for="technology in project.technologies">
+                    <li class="card-text ">{{ technology.name }}</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </template>
 

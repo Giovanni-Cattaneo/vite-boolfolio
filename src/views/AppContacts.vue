@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'AppHome',
+    name: 'AppContacts',
     data() {
         return {
         };
@@ -11,7 +11,7 @@ export default {
 <template>
     <div>
         <h1 class="text-light">Welcome to App Home</h1>
-        <p>This is the home page</p>
+        <p>This is the home page </p>
     </div>
 </template>
 
