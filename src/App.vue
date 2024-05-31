@@ -25,14 +25,12 @@ export default {
 <template>
   <appHeader />
 
-  <main class="bg-light">
-    <div class="container d-flex mt-5 ">
-      <div class="row">
-        <appCard />
-      </div>
-    </div>
-  </main>
 
+  <div class="container d-flex mt-5">
+    <div class="row">
+      <appCard />
+    </div>
+  </div>
 
   <appFooter />
 </template>

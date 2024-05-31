@@ -38,10 +38,10 @@ export default {
             <div class="card-body">
                 <h4 class="card-title">{{ project.title }}</h4>
                 <p class="card-text">{{ project.description }}</p>
-                <p v-if="project.type">{{ project.type.category }}</p>
-                <div v-for="technology in project.technologies">
-                    <p>{{ technology.name }}</p>
-                </div>
+                <p class="card-text" v-if="project.type">{{ project.type.category }}</p>
+                <ul class="list-unstyled" v-for="technology in project.technologies">
+                    <li class="card-text ">{{ technology.name }}</li>
+                </ul>
             </div>
         </div>
     </div>
