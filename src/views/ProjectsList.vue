@@ -12,7 +12,7 @@ export default {
     methods: {
         callApi() {
             axios.get(this.base_api + this.url_project).then(response => {
-                // console.log(response);
+                console.log(response);
                 this.projects = response.data.projects.data
                 console.log(response)
             }).catch(error => {

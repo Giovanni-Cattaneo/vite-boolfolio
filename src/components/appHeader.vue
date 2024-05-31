@@ -25,10 +25,10 @@ export default {
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <RouterLink :to="{ name: 'home' }">Home</RouterLink>
+                            <router-link :to="{ name: 'home' }">Home</router-link>
                         </li>
                         <li class="nav-item">
-                            <RouterLink :to="{ name: 'projects' }">Progetti</RouterLink>
+                            <router-link :to="{ name: 'projects' }">Progetti</router-link>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"

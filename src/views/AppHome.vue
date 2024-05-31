@@ -1,6 +1,14 @@
 <script>
+import appHeader from "../components/appHeader.vue";
+import appFooter from "../components/appFooter.vue";
+import appCard from "../components/appCard.vue"
+
 export default {
-    name: 'AppHome',
+    components: {
+        appHeader,
+        appFooter,
+        appCard,
+    },
     data() {
         return {
         };
@@ -9,10 +17,11 @@ export default {
 </script>
 
 <template>
+    <appHeader />
     <div>
-        <h1 class="text-light">Welcome to App Home</h1>
-        <p>This is the home page</p>
+        <h1 class="text-dark">Welcome to App Home</h1>
     </div>
+    <appFooter />
 </template>
 
 <style scoped></style>
