@@ -39,6 +39,9 @@ export default {
                 <h4 class="card-title">{{ project.title }}</h4>
                 <p class="card-text">{{ project.description }}</p>
                 <p v-if="project.type">{{ project.type.category }}</p>
+                <div v-for="technology in project.technologies">
+                    <p>{{ technology.name }}</p>
+                </div>
             </div>
         </div>
     </div>
