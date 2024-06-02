@@ -64,12 +64,12 @@ export default {
             </div>
             <div class="latest_projects pt-5">
                 <div class="row">
-                    <div v-for="project in projects" class="col d-flex gap-2 justify-content-evenly flex-wrap">
-                        <div class="card" v-if="project.favourites">
-                            <img class="card-img-top" src="" alt="Title" />
+                    <div v-for="project in projects" v-show="project.favourites"
+                        class="col-12 col-sm-6 col-md-4 col-lg-3 g-5">
+                        <div class="card">
+                            <img class="card-img-top" :src="base_api + '/storage/' + project.cover_image" alt="Title" />
                             <div class="card-body">
-                                <h4 class="card-title">Title</h4>
-                                <p class="card-text">Text</p>
+                                <h4 class="card-title">{{ project.title }}</h4>
                             </div>
                         </div>
                     </div>
@@ -129,8 +129,7 @@ export default {
     }
 
     .card {
-        width: 25%;
-        height: 200px;
+        min-height: 200px;
     }
 
 }

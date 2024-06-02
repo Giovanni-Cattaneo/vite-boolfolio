@@ -10,7 +10,7 @@ export default {
         };
     },
     methods: {
-        callApi() {
+        callApi(page = 1) {
             axios.get(this.base_api + this.url_project).then(response => {
                 console.log(response);
                 this.projects = response.data.projects.data

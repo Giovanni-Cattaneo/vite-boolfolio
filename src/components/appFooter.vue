@@ -14,29 +14,23 @@ export default {
 
 <template>
     <footer>
-        <div class="container d-flex justify-content-between py-3">
-            <ul class="list-unstyled text-dark">
-                <li><a href="" class=" text-decoration-none">Lorem, ipsum.</a></li>
-                <li><a href="" class=" text-decoration-none">Modi, quae.</a></li>
-                <li><a href="" class=" text-decoration-none">Odio, aperiam.</a></li>
-                <li><a href="" class=" text-decoration-none">Dolorum, deleniti.</a></li>
-                <li><a href="" class=" text-decoration-none">Adipisci, quibusdam?</a></li>
-            </ul>
-            <ul class="list-unstyled">
-                <li><a href="" class=" text-decoration-none">Lorem, ipsum.</a></li>
-                <li><a href="" class=" text-decoration-none">Reiciendis, facere?</a></li>
-                <li><a href="" class=" text-decoration-none">Voluptate, provident?</a></li>
-                <li><a href="" class=" text-decoration-none">Quo, repudiandae.</a></li>
-                <li><a href="" class=" text-decoration-none">Laudantium, voluptates.</a></li>
-            </ul>
-            <ul class="list-unstyled">
-                <li><a href="" class=" text-decoration-none">Lorem, ipsum.</a></li>
-                <li><a href="" class=" text-decoration-none">Cumque, aut.</a></li>
-                <li><a href="" class=" text-decoration-none">Voluptatibus, libero!</a></li>
-                <li><a href="" class=" text-decoration-none">Eaque, pariatur.</a></li>
-                <li><a href="" class=" text-decoration-none">Iusto, natus?</a></li>
-            </ul>
+        <div class="container d-flex justify-content-between p-5">
+            <div class="copy">
+                &copy;
+                <span>2024 Giovanni cattaneo</span>
+            </div>
+            <div class="footer_links d-flex gap-2">
+
+                <router-link :to="{ name: 'projects' }">progetti</router-link>
+
+                <router-link :to="{ name: 'about' }">about</router-link>
+
+                <router-link :to="{ name: 'contacts' }">contatti</router-link>
+
+            </div>
         </div>
+
+
 
 
     </footer>
@@ -50,6 +44,8 @@ footer {
 
     & a {
         color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
     }
 
     & a:hover {
