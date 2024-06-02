@@ -1,13 +1,9 @@
 <script>
-import appHeader from "../components/appHeader.vue";
-import appFooter from "../components/appFooter.vue";
-import appCard from "../components/appCard.vue"
+import ProjectsList from "./ProjectsList.vue";
 
 export default {
     components: {
-        appHeader,
-        appFooter,
-        appCard,
+        ProjectsList,
     },
     data() {
         return {
@@ -17,11 +13,9 @@ export default {
 </script>
 
 <template>
-    <appHeader />
     <div class="container mt-5">
         <h1 class="text-dark">Welcome to my Portfolio</h1>
     </div>
-    <appFooter />
 </template>
 
 <style scoped></style>
