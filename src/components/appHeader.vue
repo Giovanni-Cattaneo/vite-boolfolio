@@ -34,8 +34,11 @@ export default {
                     </li>
                 </ul>
             </div>
-            <div class="d-flex">
+            <div class="social d-flex gap-2">
                 <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+
             </div>
         </div>
 
@@ -52,7 +55,7 @@ header {
     & a {
         color: var(--jumbotron-bg-and-text);
         text-decoration: none;
-        border-bottom: 3px solid transparent;
+        padding: 0.3rem 0;
     }
 
     & a:hover {
@@ -60,7 +63,14 @@ header {
     }
 
     .logo {
-        width: 50px;
+        width: 60px;
+    }
+
+    .social {
+
+        .fa-brands {
+            font-size: 1.9rem;
+        }
     }
 }
 </style>

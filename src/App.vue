@@ -22,11 +22,7 @@ export default {
 
 <template>
   <appHeader />
-  <div class="container d-flex mt-5">
-    <div class="row">
-      <router-view></router-view>
-    </div>
-  </div>
+  <router-view></router-view>
   <appFooter />
 </template>
 
