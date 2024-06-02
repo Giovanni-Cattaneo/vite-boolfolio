@@ -13,13 +13,13 @@ export default {
 </script>
 
 <template>
-    <header>
-        <div class="container d-flex">
+    <header class="py-2">
+        <div class="container d-flex align-items-center justify-content-between">
             <div>
-                <img src="../../public/token-g.png" alt="">
+                <img class="logo" src="../../public/token-g.png" alt="">
             </div>
             <div>
-                <ul class="d-flex list-unstyled">
+                <ul class="nav d-flex list-unstyled gap-3">
                     <li>
                         <router-link :to="{ name: 'home' }">home</router-link>
                     </li>
@@ -35,7 +35,7 @@ export default {
                 </ul>
             </div>
             <div class="d-flex">
-
+                <i class="fa-brands fa-instagram"></i>
             </div>
         </div>
 
@@ -44,7 +44,7 @@ export default {
     </header>
 </template>
 
-<style>
+<style scoped>
 header {
     background-color: var(--navbar-primary);
     color: var(--jumbotron-bg-and-text);
@@ -52,6 +52,15 @@ header {
     & a {
         color: var(--jumbotron-bg-and-text);
         text-decoration: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    & a:hover {
+        border-bottom: 3px solid var(--jumbotron-bg-and-text);
+    }
+
+    .logo {
+        width: 50px;
     }
 }
 </style>
