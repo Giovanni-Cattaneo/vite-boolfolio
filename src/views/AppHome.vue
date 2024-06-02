@@ -10,14 +10,14 @@ export default {
         return {
             projects: [],
             base_api: 'http://127.0.0.1:8000',
-            url_project: '/api/projects'
+            url_project: '/api/favourites'
         };
     },
     methods: {
         callApi() {
             axios.get(this.base_api + this.url_project).then(response => {
                 console.log(response);
-                this.projects = response.data.projects.data
+                this.projects = response.data.favourites.data
                 console.log(response)
             }).catch(error => {
                 console.error('Error fetching projects:', error);
@@ -64,8 +64,7 @@ export default {
             </div>
             <div class="latest_projects pt-5">
                 <div class="row">
-                    <div v-for="project in projects" v-show="project.favourites"
-                        class="col-12 col-sm-6 col-md-4 col-lg-3 g-5">
+                    <div v-for="project in projects" class="col-12 col-sm-6 col-md-4 col-lg-3 g-5">
                         <div class="card">
                             <img class="card-img-top" :src="base_api + '/storage/' + project.cover_image" alt="Title" />
                             <div class="card-body">
