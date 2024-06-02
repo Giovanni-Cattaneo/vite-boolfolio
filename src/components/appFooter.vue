@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <footer class="mt-5">
+    <footer>
         <div class="container d-flex justify-content-between py-3">
             <ul class="list-unstyled text-dark">
                 <li><a href="" class=" text-decoration-none">Lorem, ipsum.</a></li>
@@ -46,6 +46,7 @@ export default {
 footer {
     background-color: var(--footer-bg);
     color: black;
+    margin-top: 5rem;
 
     & a {
         color: inherit;

@@ -16,17 +16,17 @@ export default {
     <div class="jumbo">
         <div class="container">
             <div class="row align-items-md-stretch">
-                <div class="col">
-                    <div class="h-100 p-5 text-white bg-primary border rounded-3">
+                <div class="col d-flex">
+                    <div class="back text-center">
+                        <h3>Back-end</h3>
+                        <p>Abile nello sviluppo di funzionalità e programmi</p>
+                    </div>
+                    <div class="m-auto text-center d-flex align-items-center justify-content-center">
                         <h2>Giovanni Cattaneo</h2>
-                        <p>
-                            Swap the background-color utility and add a `.text-*` color
-                            utility to mix up the jumbotron look. Then, mix and match with
-                            additional component themes and more.
-                        </p>
-                        <button class="btn btn-outline-primary" type="button">
-                            Example button
-                        </button>
+                    </div>
+                    <div class="front text-center">
+                        <h3>Front-end</h3>
+                        <p>Capacità di costruzione di layout complessi e stratificati</p>
                     </div>
                 </div>
             </div>
@@ -37,12 +37,12 @@ export default {
         <div class="container">
             <div class="intestation d-flex align-items-center justify-content-center g-3">
                 <span></span>
-                <h5 class="mx-5 text-center">SOME OF MY LATEST WORKS</h5>
+                <h6 class="mx-5 text-center">SOME OF MY LATEST WORKS</h6>
                 <span></span>
             </div>
-            <div class="latest_projects">
+            <div class="latest_projects pt-5">
                 <div class="row">
-                    <div class="col d-flex gap-2 justify-content-evenly">
+                    <div class="col d-flex gap-2 justify-content-evenly flex-wrap">
                         <div class="card">
                             <img class="card-img-top" src="" alt="Title" />
                             <div class="card-body">
@@ -78,6 +78,26 @@ export default {
 <style scoped>
 .jumbo {
     background-color: var(--jumbotron-bg-and-text);
+    background-image: url(../../public/jumbo-bg-img.jpg);
+    background-size: contain;
+    color: var(--text-dark);
+    position: relative;
+    min-height: 300px;
+
+    .front,
+    .back {
+        position: absolute;
+        top: 5rem;
+        width: 250px;
+    }
+
+    .front {
+        left: 20rem;
+    }
+
+    .back {
+        right: 20rem;
+    }
 }
 
 .latest_works {
@@ -85,7 +105,7 @@ export default {
 
     .intestation {
 
-        & h5 {
+        & h6 {
             width: 20%;
         }
 
