@@ -64,7 +64,7 @@ export default {
             </div>
             <div class="latest_projects pt-5">
                 <div class="row">
-                    <div v-for="project in projects" class="col-12 col-sm-6 col-md-4 col-lg-3 g-5">
+                    <div v-for="project in projects" class="col-12 col-sm-6 col-md-4 col-lg-3 g-5 d-flex">
                         <div class="card">
                             <img class="card-img-top" :src="base_api + '/storage/' + project.cover_image" alt="Title" />
                             <div class="card-body">
