@@ -5,8 +5,11 @@ import ProjectsList from './views/ProjectsList.vue';
 import AppAbout from './views/AppAbout.vue';
 import AppContacts from './views/AppContacts.vue';
 import AppBlog from './views/AppBlog.vue';
+import SingleProject from './views/SingleProject.vue';
 
-
+const routes = [
+    { path: '/project/:slug', component: SingleProject }
+]
 const router = createRouter({
     history: createWebHistory(),
     routes: [
