@@ -45,8 +45,6 @@ export default {
             </div>
         </div>
 
-
-
     </header>
 </template>
 
@@ -60,6 +58,11 @@ header {
         text-decoration: none;
         padding: 0.3rem 0;
         transition: color 200ms;
+    }
+
+    .router-link-active,
+    .router-link-exact-active {
+        color: rgb(151, 151, 151);
     }
 
     & a:hover {

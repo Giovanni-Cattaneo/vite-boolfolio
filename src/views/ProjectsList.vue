@@ -40,8 +40,8 @@ export default {
         </div>
 
         <!-- Pagination Controls -->
-        <nav aria-label="Page navigation">
-            <ul class="pagination">
+        <nav aria-label="Page navigation ">
+            <ul class="pagination py-4">
                 <!-- Previous -->
                 <li class="page-item" :class="{ disabled: !state.projects.prev_page_url }">
                     <button class="page-link" aria-label="Previous" @click="state.prev(state.projects.prev_page_url)"
@@ -68,4 +68,8 @@ export default {
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.card {
+    height: 500px;
+}
+</style>
