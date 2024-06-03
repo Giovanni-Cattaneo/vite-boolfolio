@@ -49,7 +49,8 @@ export default {
                 <div class="card" @click="cardDetail">
                     <img class="card-img-top" :src="base_api + '/storage/' + project.cover_image" alt="Title" />
                     <div class="card-body">
-                        <h4 class="card-title">{{ project.title }}</h4>
+                        <router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">{{
+                            project.title }}</router-link>
                         <p class="card-text">{{ project.description }}</p>
                         <p class="card-text" v-if="project.type">{{ project.type.category }}</p>
                         <ul class="list-unstyled" v-for="technology in project.technologies" :key="technology.id">
