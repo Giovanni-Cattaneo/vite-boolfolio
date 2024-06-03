@@ -1,6 +1,7 @@
 <script>
 import ProjectsList from "./ProjectsList.vue";
 import axios from 'axios';
+import { state } from '../state.js'
 
 export default {
     components: {
@@ -8,6 +9,7 @@ export default {
     },
     data() {
         return {
+            state,
             projects: [],
             base_api: 'http://127.0.0.1:8000',
             url_project: '/api/favourites'
