@@ -30,5 +30,6 @@ export const state = reactive({
     choosePage(page) {
         let url = `${this.base_api}${this.url_project}?page=${page}`;
         this.callApi(url);
-    }
+    },
+
 });

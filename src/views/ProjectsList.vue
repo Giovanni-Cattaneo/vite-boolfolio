@@ -10,28 +10,17 @@ export default {
         };
     },
     methods: {
-        setTimeout(() => {
-    const h1 = document.querySelector("h1");
 
-    animate(
-        (progress) => {
-            h1.innerHTML = Math.round(progress * 100);
-        },
-        { duration: 2000, easing: "ease-out" }
-    );
-}, 1000);
-  
     },
-mounted() {
-    let url = state.base_api + state.url_project;
-    state.callApi(url);
-}
+    mounted() {
+        let url = state.base_api + state.url_project;
+        state.callApi(url);
+    }
 };
 </script>
 
 <template>
     <div class="container">
-        <div id="counter">0</div>
         <div class="row">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-5" v-for="project in state.projects.data" :key="project.id">
                 <div class="card" @click="cardDetail">
