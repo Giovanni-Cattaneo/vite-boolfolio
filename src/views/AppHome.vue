@@ -68,7 +68,10 @@ export default {
                         <div class="card">
                             <img class="card-img-top" :src="base_api + '/storage/' + project.cover_image" alt="Title" />
                             <div class="card-body">
-                                <h4 class="card-title">{{ project.title }}</h4>
+                                <h4 class="card-title">
+                                    <router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">{{
+                                        project.title }}</router-link>
+                                </h4>
                             </div>
                         </div>
                     </div>

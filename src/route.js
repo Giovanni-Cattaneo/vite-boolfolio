@@ -7,9 +7,6 @@ import AppContacts from './views/AppContacts.vue';
 import AppBlog from './views/AppBlog.vue';
 import SingleProject from './views/SingleProject.vue';
 
-const routes = [
-    { path: '/project/:slug', component: SingleProject }
-]
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -37,6 +34,11 @@ const router = createRouter({
             path: '/blog',
             name: 'blog',
             component: AppBlog,
+        },
+        {
+            path: '/project/:slug',
+            name: 'SingleProject',
+            component: SingleProject
         }
     ]
 })
