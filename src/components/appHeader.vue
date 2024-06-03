@@ -32,6 +32,9 @@ export default {
                     <li>
                         <router-link :to="{ name: 'contacts' }">contatti</router-link>
                     </li>
+                    <li>
+                        <router-link :to="{ name: 'blog' }">blog</router-link>
+                    </li>
                 </ul>
             </div>
             <div class="social d-flex gap-2">

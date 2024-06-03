@@ -27,6 +27,8 @@ export default {
 
                 <router-link :to="{ name: 'contacts' }">contatti</router-link>
 
+                <router-link :to="{ name: 'blog' }">blog</router-link>
+
             </div>
         </div>
 
@@ -39,7 +41,7 @@ export default {
 <style scoped>
 footer {
     background-color: var(--footer-bg);
-    color: black;
+    color: #b8babd;
     margin-top: 5rem;
 
     & a {
