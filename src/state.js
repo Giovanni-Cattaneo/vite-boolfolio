@@ -1,5 +1,6 @@
 import { reactive } from 'vue'
 import axios from 'axios';
+import { animate } from 'motion'
 
 export const state = reactive({
     projects: [],
