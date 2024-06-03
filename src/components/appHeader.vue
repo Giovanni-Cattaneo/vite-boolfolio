@@ -59,10 +59,11 @@ header {
         color: var(--jumbotron-bg-and-text);
         text-decoration: none;
         padding: 0.3rem 0;
+        transition: color 200ms;
     }
 
     & a:hover {
-        border-bottom: 3px solid var(--jumbotron-bg-and-text);
+        color: rgb(151, 151, 151);
     }
 
     .logo {
