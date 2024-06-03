@@ -92,12 +92,12 @@ export default {
     background-size: contain;
     color: var(--text-dark);
     position: relative;
-    min-height: 300px;
+    min-height: 350px;
 
     .front,
     .back {
         position: absolute;
-        top: 5rem;
+        top: 8rem;
         width: 250px;
     }
 
