@@ -1,6 +1,7 @@
 <script>
 import axios from 'axios';
 import { state } from '../state.js'
+import { animate } from 'motion';
 export default {
     name: 'ProjectsList',
     data() {
@@ -15,6 +16,7 @@ export default {
     mounted() {
         let url = state.base_api + state.url_project;
         state.callApi(url);
+        state.timing();
     }
 };
 </script>
@@ -22,6 +24,10 @@ export default {
 <template>
     <div class="container text-dark">
         <h2 class="mt-3">Complete Project List</h2>
+        <div class="d-flex">
+            <h4>N. Progetti: </h4>
+            <h4 id="count"> 0</h4>
+        </div>
         <div class="row">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-5" v-for="project in state.projects.data" :key="project.id">
                 <div class="card" @click="cardDetail">

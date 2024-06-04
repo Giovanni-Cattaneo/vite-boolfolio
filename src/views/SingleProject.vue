@@ -15,10 +15,12 @@ export default {
             const fullUrl = this.base_api + this.url_project + projectSlug;
             axios.get(fullUrl).then(response => {
                 console.log(response);
-                this.project = response.data.response;
-            }).catch(error => {
-                console.error('Errore nel recupero dei progetti:', error);
-            });
+                if (response.data.success) {
+                    this.project = response.data.response;
+                } else {
+
+                }
+            })
         }
     },
     mounted() {

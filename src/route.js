@@ -39,7 +39,13 @@ const router = createRouter({
             path: '/project/:slug',
             name: 'SingleProject',
             component: SingleProject
+        },
+        {
+            // path: '/:pathMatch(.*)*',
+            // name: 'not-found',
+            // component: NotFound
         }
+
     ]
 })
 
