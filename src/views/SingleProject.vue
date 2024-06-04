@@ -14,7 +14,6 @@ export default {
             const projectSlug = this.$route.params.slug;
             const fullUrl = this.base_api + this.url_project + projectSlug;
             axios.get(fullUrl).then(response => {
-                console.log(response);
                 if (response.data.success) {
                     this.project = response.data.response;
                 } else {

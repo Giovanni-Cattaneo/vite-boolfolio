@@ -30,17 +30,20 @@ export default {
         </div>
         <div class="row">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-5" v-for="project in state.projects.data" :key="project.id">
-                <div class="card" @click="cardDetail">
-                    <img class="card-img-top" :src="state.base_api + '/storage/' + project.cover_image" alt="Title" />
-                    <div class="card-body">
-                        <router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">{{
-                            project.title }}</router-link>
-                        <p class="card-text">{{ project.description }}</p>
-                        <p class="card-text" v-if="project.type">{{ project.type.category }}</p>
-                        <ul class="list-unstyled" v-for="technology in project.technologies" :key="technology.id">
-                            <li class="card-text">{{ technology.name }}</li>
-                        </ul>
-                    </div>
+                <div class="card"><router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">
+                        <img class="card-img-top" :src="state.base_api + '/storage/' + project.cover_image"
+                            alt="Title" />
+                        <div class="card-body">
+                            <router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">{{
+                                project.title }}</router-link>
+                            <p class="card-text">{{ project.description }}</p>
+                            <p class="card-text" v-if="project.type">{{ project.type.category }}</p>
+                            <ul class="list-unstyled" v-for="technology in project.technologies" :key="technology.id">
+                                <li class="card-text">{{ technology.name }}</li>
+                            </ul>
+                        </div>
+                    </router-link>
+
                 </div>
             </div>
         </div>
@@ -77,5 +80,10 @@ export default {
 <style scoped>
 .card {
     height: 500px;
+
+    & a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 </style>

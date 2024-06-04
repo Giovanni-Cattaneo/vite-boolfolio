@@ -10,15 +10,10 @@ export const state = reactive({
 
     callApi(url) {
         axios.get(url).then(response => {
-            console.log(response);
             this.projects = response.data.projects
-            console.log(response)
         }).catch(error => {
             console.error('Error fetching projects:', error);
         });
-    },
-    cardDetail() {
-        console.log('Hello', this)
     },
     prev(url) {
         this.callApi(url);
@@ -36,7 +31,6 @@ export const state = reactive({
     allApi() {
         axios.get('http://127.0.0.1:8000/api/projectsAll').then(response => {
             this.projectsList = response.data.projects
-            console.log(response)
         }).catch(error => {
             console.error('Error fetching projects:', error);
         });
