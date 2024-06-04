@@ -75,6 +75,8 @@ export default {
                                     <h4 class="card-title">
                                         {{ project.title }}
                                     </h4>
+                                    <hr>
+                                    <p class="card-text">Lorem ipsum dolor sit amet.</p>
                                 </div>
                             </div>
                         </router-link>
@@ -136,10 +138,6 @@ export default {
 
         }
 
-    }
-
-    .card {
-        min-height: 250px;
     }
 
 }
