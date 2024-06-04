@@ -84,7 +84,9 @@ a {
     text-decoration: none;
 }
 
-.card {}
+.card {
+    min-height: 300px;
+}
 
 .pagination {
     & button {

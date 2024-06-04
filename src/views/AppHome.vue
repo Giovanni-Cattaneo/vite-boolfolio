@@ -139,7 +139,7 @@ export default {
     }
 
     .card {
-        min-height: 200px;
+        min-height: 250px;
     }
 
 }
