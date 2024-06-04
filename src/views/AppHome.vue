@@ -67,15 +67,18 @@ export default {
             <div class="latest_projects pt-5">
                 <div class="row">
                     <div v-for="project in projects" class="col-12 col-sm-6 col-md-4 col-lg-3 g-5 d-flex">
-                        <div class="card">
-                            <img class="card-img-top" :src="base_api + '/storage/' + project.cover_image" alt="Title" />
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">{{
-                                        project.title }}</router-link>
-                                </h4>
+                        <router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">
+                            <div class="card">
+                                <img class="card-img-top" :src="base_api + '/storage/' + project.cover_image"
+                                    alt="Title" />
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        {{ project.title }}
+                                    </h4>
+                                </div>
                             </div>
-                        </div>
+                        </router-link>
+
                     </div>
                 </div>
             </div>
@@ -112,6 +115,11 @@ export default {
 
 .latest_works {
     color: #b2b1b8;
+
+    & a {
+        color: inherit;
+        text-decoration: none;
+    }
 
     .intestation {
 

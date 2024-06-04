@@ -30,7 +30,8 @@ export default {
         </div>
         <div class="row">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-5" v-for="project in state.projects.data" :key="project.id">
-                <div class="card"><router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">
+                <router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">
+                    <div class="card">
                         <img class="card-img-top" :src="state.base_api + '/storage/' + project.cover_image"
                             alt="Cover-img" />
                         <div class="card-body">
@@ -43,9 +44,8 @@ export default {
                                 <li class="card-text">{{ technology.name }}</li>
                             </ul>
                         </div>
-                    </router-link>
-
-                </div>
+                    </div>
+                </router-link>
             </div>
         </div>
 
@@ -79,13 +79,12 @@ export default {
 </template>
 
 <style scoped>
-.card {
-
-    & a {
-        color: inherit;
-        text-decoration: none;
-    }
+a {
+    color: inherit;
+    text-decoration: none;
 }
+
+.card {}
 
 .pagination {
     & button {
