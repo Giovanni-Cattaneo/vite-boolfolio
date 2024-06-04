@@ -32,11 +32,12 @@ export default {
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-5" v-for="project in state.projects.data" :key="project.id">
                 <div class="card"><router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">
                         <img class="card-img-top" :src="state.base_api + '/storage/' + project.cover_image"
-                            alt="Title" />
+                            alt="Cover-img" />
                         <div class="card-body">
-                            <router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">{{
-                                project.title }}</router-link>
-                            <p class="card-text">{{ project.description }}</p>
+                            <h4 class="card-title">{{
+                                project.title }}</h4>
+                            <hr>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
                             <p class="card-text" v-if="project.type">{{ project.type.category }}</p>
                             <ul class="list-unstyled" v-for="technology in project.technologies" :key="technology.id">
                                 <li class="card-text">{{ technology.name }}</li>
@@ -50,7 +51,7 @@ export default {
 
         <!-- Pagination Controls -->
         <nav aria-label="Page navigation ">
-            <ul class="pagination py-4">
+            <ul class="pagination py-4 justify-content-center">
                 <!-- Previous -->
                 <li class="page-item" :class="{ disabled: !state.projects.prev_page_url }">
                     <button class="page-link" aria-label="Previous" @click="state.prev(state.projects.prev_page_url)"
@@ -79,11 +80,17 @@ export default {
 
 <style scoped>
 .card {
-    height: 500px;
 
     & a {
         color: inherit;
         text-decoration: none;
+    }
+}
+
+.pagination {
+    & button {
+        padding: 0.5rem;
+        border-radius: 0.3rem;
     }
 }
 </style>
