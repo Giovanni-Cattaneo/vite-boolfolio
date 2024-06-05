@@ -42,9 +42,9 @@ export default {
                                 project.title }}</h4>
                             <hr>
                             <p class="card-text">Lorem ipsum dolor sit amet</p>
-                            <p class="card-text" v-if="project.type">{{ project.type.category }}</p>
+                            <span class="card-text type" v-if="project.type">{{ project.type.category }}</span>
                             <ul class="list-unstyled" v-for="technology in project.technologies" :key="technology.id">
-                                <li class="card-text">{{ technology.name }}</li>
+                                <li class="card-text"><span class="tech">{{ technology.name }}</span></li>
                             </ul>
                         </div>
                     </div>
@@ -89,6 +89,13 @@ a {
 
 .card {
     min-height: 300px;
+
+    .tech,
+    .type {
+        background-color: green;
+        padding: 0.2rem;
+        border-radius: 0.4rem;
+    }
 }
 
 .pagination {
