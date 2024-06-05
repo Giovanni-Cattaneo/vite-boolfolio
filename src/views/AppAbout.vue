@@ -9,13 +9,13 @@ export default {
 </script>
 
 <template>
-    <div class="container text-dark mt-5">
+    <div class="container text-dark mt-5 text-center">
         <h1>Welcome to App About</h1>
         <p>This is the about page</p>
     </div>
 
-    <div class="bio container d-flex flex-column gap-5">
-        <div class="d-flex gap-5">
+    <div class="bio container d-flex flex-column gap-5 mt-5">
+        <div class="d-flex gap-5 justify-content-between">
             <div class="left">
                 <h3>Summary</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus, eius nihil expedita itaque
@@ -31,8 +31,8 @@ export default {
                     amet, ullam vero iusto eius optio non? Ducimus pariatur et aut nobis provident atque tempore
                     exercitationem dignissimos quasi at.</p>
             </div>
-            <div class="right">
-                <img src="../../public/avatar_temp.avif" alt="">
+            <div class="right d-flex justify-content-end">
+                <img src="../../public/avatar_temp.avif" alt="" width="300">
             </div>
         </div>
 
@@ -40,7 +40,7 @@ export default {
             <div class="left">
                 <img src="../../public/boolean-logo.png" alt="" width="300">
             </div>
-            <div class="right d-flex flex-column align-items-end">
+            <div class="right d-flex flex-column">
                 <h3>Training</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut fugit est, hic ab qui omnis obcaecati
                     laudantium odit veniam? Repellat illo consequuntur molestias sint repellendus optio, reiciendis quos
@@ -48,8 +48,19 @@ export default {
                     incidunt exercitationem repudiandae explicabo facere corporis commodi esse!</p>
             </div>
         </div>
+
+        <div class="interest">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
     </div>
 
 </template>
 
-<style scoped></style>
+<style scoped>
+.left,
+.right {
+    width: 50%;
+    margin: auto;
+}
+</style>

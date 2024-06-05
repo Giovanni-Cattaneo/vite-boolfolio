@@ -23,13 +23,16 @@ export default {
 
 <template>
     <div class="container text-dark">
-        <h2 class="mt-3">Complete Project List</h2>
-        <div class="d-flex">
-            <h4>N. Progetti: </h4>
-            <h4 id="count" class="px-1"> 0</h4>
+        <div class="text-center">
+            <h2 class="mt-3">Complete Project List</h2>
+            <div class="d-flex justify-content-center">
+                <h4>N. Progetti: </h4>
+                <h4 id="count" class="px-1"> 0</h4>
+            </div>
         </div>
+
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-5" v-for="project in state.projects.data" :key="project.id">
+            <div class="col-12 col-sm-6 col-md-4 g-5" v-for="project in state.projects.data" :key="project.id">
                 <router-link :to="{ name: 'SingleProject', params: { slug: project.slug } }">
                     <div class="card">
                         <img class="card-img-top" :src="state.base_api + '/storage/' + project.cover_image"

@@ -19,7 +19,7 @@ export default {
                 <img class="logo" src="../../public/token-g.png" alt="">
             </div>
             <div>
-                <ul class="nav d-flex list-unstyled gap-3">
+                <ul class="nav d-flex list-unstyled gap-3 flex-wrap">
                     <li>
                         <router-link :to="{ name: 'home' }">home</router-link>
                     </li>
@@ -37,7 +37,7 @@ export default {
                     </li>
                 </ul>
             </div>
-            <div class="social d-flex gap-2">
+            <div class="social d-md-flex gap-2 d-none">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-github"></i>
                 <i class="fa-brands fa-linkedin-in"></i>
