@@ -92,7 +92,8 @@ a {
 
     .tech,
     .type {
-        background-color: green;
+        background-color: goldenrod;
+        color: white;
         padding: 0.2rem;
         border-radius: 0.4rem;
     }

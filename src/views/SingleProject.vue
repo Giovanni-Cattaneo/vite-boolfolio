@@ -29,10 +29,21 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <h1 class="text-dark">
+    <div class="container mt-5">
+        <h1 class="text-dark text-center">
             {{ project.title }}
         </h1>
+        <div class="right">
+            <p>{{ project.description }}</p>
+        </div>
+        <div class="left" v-if="project.cover_image">
+            <img :src="project.cover_image" alt="">
+        </div>
+        <div class="left" v-else>
+            <img src="../../public/avatar_temp.avif" alt="">
+            <p>nessuna immagine</p>
+        </div>
+
 
     </div>
 </template>
