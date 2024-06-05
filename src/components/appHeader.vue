@@ -16,7 +16,8 @@ export default {
     <header class="py-2">
         <div class="container d-flex align-items-center justify-content-between">
             <div>
-                <img class="logo" src="../../public/token-g.png" alt="">
+                <router-link :to="{ name: 'home' }"><img class="logo" src="../../public/token-g.png"
+                        alt=""></router-link>
             </div>
             <div>
                 <ul class="nav d-flex list-unstyled gap-3 flex-wrap">
@@ -38,10 +39,12 @@ export default {
                 </ul>
             </div>
             <div class="social d-md-flex gap-2 d-none">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-github"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-
+                <a href="https://github.com/Giovanni-Cattaneo" class="nav-link" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Giovanni-Cattaneo" class="nav-link" target="_blank"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/Giovanni-Cattaneo" class="nav-link" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
 
